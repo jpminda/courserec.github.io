@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore Western Psychology courses by the topics you enjoyed.">
+  <title>Psychology Course Finder</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234b2683'/%3E%3Cpath d='M20 21c0-6 5-10 11-8 4-5 13-2 13 5 6 1 7 10 2 13 4 5 0 13-6 13-2 7-12 8-15 2-7 1-11-7-7-12-5-4-3-12 2-13Z' fill='none' stroke='white' stroke-width='4'/%3E%3Cpath d='M32 15v34M21 28h11m0 8h12' stroke='white' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="courses.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="brand"><span class="mark" aria-hidden="true">Ψ</span><span>Psychology Course Finder</span></div>
+    <span class="term">2026–27 catalogue</span>
+  </header>
+
+  <main>
+    <section class="search-panel" aria-labelledby="page-title">
+      <p class="eyebrow">Find your next course</p>
+      <h1 id="page-title">Find a course that fits.</h1>
+      <p class="intro">Enter a course number you enjoyed, a topic that interests you, or a professor’s name.</p>
+      <form id="search-form" class="unified-search" novalidate>
+        <label for="search-input">Course number, keyword, or professor</label>
+        <div class="input-row">
+          <div class="input-wrap"><span aria-hidden="true">🔎</span><input id="search-input" name="search" autocomplete="off" placeholder="e.g., 2135, memory, or Minda" aria-describedby="search-help"></div>
+          <button type="submit">Find courses</button>
+        </div>
+        <p id="search-help" class="helper">A course number produces related recommendations; words search titles, topics, descriptions, and instructors.</p>
+      </form>
+      <div class="examples" aria-label="Example searches">
+        <span>Try:</span>
+        <button type="button" data-query="2135">🧠 2135 Cognitive Psychology</button>
+        <button type="button" data-query="memory">🗂️ Memory</button>
+        <button type="button" data-query="Minda">👤 Minda</button>
+      </div>
+    </section>
+
+    <section id="results" class="results" aria-live="polite" hidden></section>
+  </main>
+
+  <footer>
+    <p>Recommendations are based on shared topics. Prerequisites are summarized for convenience; always verify them in the <a href="https://westerncalendar.uwo.ca/Courses.cfm?Subject=PSYCHOL&amp;SelectedCalendar=Live&amp;ArchiveID=" target="_blank" rel="noopener">Academic Calendar</a> and consult the <a href="https://psychology.uwo.ca/undergraduate/course_information/undergradcourseoutlines.html" target="_blank" rel="noopener">official course offerings and outlines</a>.</p>
+  </footer>
+</body>
+</html>
